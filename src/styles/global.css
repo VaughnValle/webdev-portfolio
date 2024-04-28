@@ -106,8 +106,8 @@ button:hover {
 }
 
 .image {
-  width: 650px;
-  height: 650px;
+  width: 700px;
+  height: 700px;
   object-fit: cover;
   object-position: 0 35%;
   border-radius: 50px;
