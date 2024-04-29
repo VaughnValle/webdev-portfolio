@@ -1,11 +1,10 @@
 import './App.css';
-import Gallery from './Gallery';
+import Hero from './Hero';
 
 function App() {
   return (
       <>
-      <h1 style={{textAlign: 'center'}}> Gallery </h1>
-      <Gallery />
+      <Hero />
       </>
   );
 }
