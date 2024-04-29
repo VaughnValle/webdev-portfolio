@@ -1,12 +1,20 @@
 // UI stylesheet
 import './global.css'
-
+import {useState} from 'react'
 import Gallery from './Gallery';
 const images = "./images/"
 
-
 const Hero = () => {
     const charles = require(images + 'charles.jpg');
+    const [shown, setShow] = useState(false);
+    const showGallery = () => {
+        if (shown === true){
+            setShow(false);
+        }
+        else {
+            setShow(true);
+        }
+    }
     return(
         <>
         <nav>
@@ -22,7 +30,7 @@ const Hero = () => {
               <p>
           Don't let your graduation photos be an afterthought! Capture this momentous occasion with a professional photoshoot that will leave you with stunning memories. Booking is easy, so lock in your date and get ready to celebrate your accomplishment in style.
               </p>
-              <button id="gal" onclick={Gallery}> Gallery </button>
+              <button id="gal" onClick={showGallery}> Gallery </button>
             </div>
             <div class="right">
               <img
@@ -33,6 +41,7 @@ const Hero = () => {
             </div>
           </div>
         </section>
+        {shown && <Gallery />}
         </>
     );
 

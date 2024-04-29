@@ -79,6 +79,8 @@ const Gallery = () => {
     ]
     return(
         <>
+        <h1 style={{textAlign: 'center'}}> Gallery </h1>
+        <br />
         <div className="gallery">
             {pics.map((item, index)=>{
                 return(
