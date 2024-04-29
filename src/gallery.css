@@ -48,7 +48,7 @@
     background-color: #cdf6fc;
 }
 
-/* mobile */
+/* mobile 
 @media (max-width: 991px){
     .gallery{
         -webkit-column-count: 2;
@@ -56,8 +56,9 @@
         column-count: 2;
     }
 }
+*/
 
-/* single column if needed */
+/* single column if needed 
 @media (max-width: 480px){
     .gallery{
         -webkit-column-count: 1;
@@ -68,3 +69,4 @@
         column-width: 100%;
     }
 }
+*/
