@@ -5,10 +5,8 @@
     -webkit-column-width: 2rem;
     -moz-column-width: 2rem;
     column-width: 2rem;
-    padding: 0 0;
+    padding: 0 12px;
     background-color: #f0f1f3;
-    display: inline-block;
-
 }
 
 .gallery .picture{
