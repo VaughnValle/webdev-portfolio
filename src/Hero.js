@@ -1,7 +1,3 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-
-
 // UI stylesheet
 import './global.css'
 
@@ -16,7 +12,7 @@ const Hero = () => {
         <nav>
           <div class="logo">Vaughn Valle</div>
           <div class="nav">
-            <a href="/">Home</a> <a href="https://www.vaughnvalle.me/" target="_blank">About</a> <a href="https://drive.google.com/file/d/17KcHZu-u0fQfqyv6D6Gdocxfv1-uOTjK/view?usp=sharing" target="_blank">Resume</a>
+            <a href="/">Home</a> <a href="https://www.vaughnvalle.me/" target="_blank" rel="noreferrer">About</a> <a href="https://drive.google.com/file/d/17KcHZu-u0fQfqyv6D6Gdocxfv1-uOTjK/view?usp=sharing" target="_blank" rel="noreferrer">Resume</a>
           </div>
         </nav>
         <section class="main">
@@ -32,6 +28,7 @@ const Hero = () => {
               <img
                 src={charles}
                 class="image"
+                alt="Charles"
               />
             </div>
           </div>
