@@ -1,5 +1,6 @@
 // UI stylesheet
 import './global.css'
+import './gallery.css'
 import {useState} from 'react'
 import Gallery from './Gallery';
 const images = "./images/"

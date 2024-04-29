@@ -79,7 +79,6 @@ const Gallery = () => {
     ]
     return(
         <>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <h1 style={{textAlign: 'center'}}> Gallery </h1>
         <br />
         <div className="gallery">
