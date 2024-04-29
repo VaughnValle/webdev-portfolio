@@ -22,7 +22,7 @@
 
 .like-cont{
     display: flex;
-    flex-direction: 'row';
+    flex-direction: row;
     align-items: center;
     background-color: #fff;
     padding: 20px 20%;
@@ -41,6 +41,8 @@
     border-radius: 4px;
     padding: 6px 15px;
     margin: 0 10px;
+    width: 40%;
+    justify-content: center;
 }
 
 .like-active, .share-active{
