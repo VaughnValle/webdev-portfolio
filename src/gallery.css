@@ -7,6 +7,7 @@
     column-width: 33%;
     padding: 0 12px;
     background-color: #f0f1f3;
+    display: block;
 }
 
 .gallery .picture{
