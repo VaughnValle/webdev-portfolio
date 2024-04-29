@@ -42,7 +42,9 @@ const Hero = () => {
             </div>
           </div>
         </section>
+        <div class="gallery">
         {shown && <Gallery />}
+        </div>
         </>
     );
 
