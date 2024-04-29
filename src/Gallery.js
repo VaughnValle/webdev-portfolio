@@ -84,7 +84,7 @@ const Gallery = () => {
                 return(
                     <>
                     <div className="picture" key={index}>
-                        <img src={item.imgSrc} style={{width: '100%'}} alt="A Graduation Picture"></img>
+                        <img src={item.imgSrc} style={{width: '100%'}} alt="An NYU Graduate"></img>
                     </div>
                     <div className="like-cont">
                         <button className={`btn ${activeBtn === "like" ? "like-active" : ""}`}
