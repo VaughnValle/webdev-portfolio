@@ -1,0 +1,72 @@
+:root {
+  --fg: #0C0D0D;
+  --bg: #ffffff;
+  --accent: #C37898;
+
+}
+
+.todo-list{
+    margin-left: 2rem;
+    background-color: #f0f1f3;
+    padding: 2rem;
+    border: 0px solid var(--accent);
+    border-radius: 1rem;
+
+}
+.todo-list h2{
+    margin-bottom: 1rem;
+}
+
+.todo-item {
+ display: flex;
+ justify-content: space-between;
+ margin-bottom: 8px;
+
+}
+.todo-item p {
+ color: #7F7E7E;
+}
+
+input[type=text] {
+	appearance: none;
+	border: none;
+	outline: none;
+	border-bottom: .2em solid var(--accent);
+	background: rgba(var(--accent), .6);
+	border-radius: .2em .2em 0 0;
+	padding: .4em;
+	color: var(--accent);
+    width: 7rem;
+    height: 3rem;
+    font: inherit;
+    margin-bottom: 3rem;
+}
+
+input[type=checkbox] {
+    appearance: none;
+  background-color: #fff;
+  margin: 0;
+	font: inherit;
+  color: currentColor;
+  width: 1.15em;
+  height: 1.15em;
+  border: 0.15em solid var(--accent);
+  border-radius: 0.15em;
+  transform: translateY(-0.075em);
+	display: grid;
+  place-content: center;
+	&::before {
+		content: "";
+		width: 0.65em;
+		height: 0.65em;
+		transform: scale(0);
+		transition: 120ms transform ease-in-out;
+		box-shadow: inset 1em 1em var(--accent);
+		background-color: CanvasText;
+		clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+		transform-origin: left top;
+	}
+	&:checked::before {
+		transform: scale(1);
+	}
+}
