@@ -24,7 +24,6 @@ const Hero = () => {
         }
         else {
             setToShow(true);
->>>>>>> 562c3a7600e18b78c3e82b8b3fb53e1d9e5469e6
         }
     }
     return(
