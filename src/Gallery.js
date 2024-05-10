@@ -100,6 +100,12 @@ const Gallery = () => {
                         >
                             Share
                         </button>
+                        <button className={`btn ${activeBtn === "cart" ? "cart-active" : ""}`}
+                            onClick={() => handleClick("cart")}
+
+                        >
+                            Add to Cart
+                        </button>
 
                     </div>
                     </>

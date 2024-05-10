@@ -2,9 +2,9 @@
     -webkit-column-count: 3;
     -moz-column-count: 3;
     column-count: 3;
-    -webkit-column-width: 33%;
-    -moz-column-width: 33%;
-    column-width: 33%;
+    -webkit-column-width: 2rem;
+    -moz-column-width: 2rem;
+    column-width: 2rem;
     padding: 0 12px;
     background-color: #f0f1f3;
 }
@@ -22,7 +22,7 @@
 
 .like-cont{
     display: flex;
-    flex-direction: 'row';
+    flex-direction: row;
     align-items: center;
     background-color: #fff;
     padding: 20px 20%;
@@ -41,6 +41,8 @@
     border-radius: 4px;
     padding: 6px 15px;
     margin: 0 10px;
+    width: 40%;
+    justify-content: center;
 }
 
 .like-active, .share-active{
