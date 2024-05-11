@@ -1,5 +1,5 @@
-import React, {useState} from 'react';
-
+import React, {useState, useContext} from 'react';
+import { ShopContext } from "./shop-context.js"
 // format gallery layout
 import './gallery.css'
 
@@ -12,8 +12,64 @@ import Img6 from './images/gallery/DSCF6316.jpg';
 import Img3 from './images/gallery/DSCF6349.jpg';
 import Img8 from './images/gallery/DSCF6396.jpg';
 import Img9 from './images/gallery/DSCF6178.jpg';
-
+export const pics = [
+        {
+            id: 1,
+            imgSrc: Img1,
+            price: 20,
+            description: "A picture!",
+        },
+        {
+            id: 2,
+            imgSrc: Img2,
+            price: 20,
+            description: "A picture!",
+        },
+        {
+            id: 3,
+            imgSrc: Img3,
+            price: 20,
+            description: "A picture!",
+        },
+        {
+            id: 4,
+            imgSrc: Img4,
+            price: 20,
+            description: "A picture!",
+        },
+        {
+            id: 5,
+            price: 20,
+            description: "A picture!",
+            imgSrc: Img5,
+        },
+        {
+            id: 6,
+            imgSrc: Img6,
+            price: 20,
+            description: "A picture!",
+        },
+        {
+            id: 7,
+            imgSrc: Img7,
+            price: 20,
+            description: "A picture!",
+        },
+        {
+            id: 8,
+            imgSrc: Img8,
+            price: 20,
+            description: "A picture!",
+        },
+        {
+            id: 9,
+            imgSrc: Img9,
+            price: 20,
+            description: "A picture!",
+        },
+    ]
 const Gallery = () => {
+    const { addToCart } = useContext(ShopContext);
     const [likeCount, setLike] = useState(1337);
     const [activeBtn, setActiveBtn] = useState("none");
     const handleClick = (reaction) => {
@@ -39,53 +95,15 @@ const Gallery = () => {
             }
         }
     };
-    let pics = [
-        {
-            id: 1,
-            imgSrc: Img1,
-        },
-        {
-            id: 2,
-            imgSrc: Img2,
-        },
-        {
-            id: 3,
-            imgSrc: Img3,
-        },
-        {
-            id: 4,
-            imgSrc: Img4,
-        },
-        {
-            id: 5,
-            imgSrc: Img5,
-        },
-        {
-            id: 6,
-            imgSrc: Img6,
-        },
-        {
-            id: 7,
-            imgSrc: Img7,
-        },
-        {
-            id: 8,
-            imgSrc: Img8,
-        },
-        {
-            id: 9,
-            imgSrc: Img9,
-        },
-    ]
     return(
         <>
         <h1 style={{textAlign: 'center'}}> Gallery </h1>
         <br />
         <div className="gallery">
-            {pics.map((item, index)=>{
+            {pics.map((item)=>{
                 return(
                     <>
-                    <div className="picture" key={index}>
+                    <div className="picture" key={item.id}>
                         <img src={item.imgSrc} style={{width: '100%'}} alt="An NYU Graduate"></img>
                     </div>
                     <div className="like-cont">
@@ -101,10 +119,9 @@ const Gallery = () => {
                             Share
                         </button>
                         <button className={`btn ${activeBtn === "cart" ? "cart-active" : ""}`}
-                            onClick={() => handleClick("cart")}
-
+                            onClick={() => addToCart(item.id)}
                         >
-                            Add to Cart
+                            Buy for {item.price}
                         </button>
 
                     </div>

@@ -3,11 +3,16 @@ import './global.css'
 import './gallery.css'
 import {useState} from 'react'
 import Gallery from './Gallery';
+import { ShoppingCart } from "phosphor-react";
 import Todo from './Todo';
+import { Cart } from './cart';
+import { ShopContextProvider } from "./shop-context.js"
 const images = "./images/"
+
 
 const Hero = () => {
     const charles = require(images + 'charles.jpg');
+    const [shownCart, setCartShow] = useState(false);
     const [shownGal, setGalShow] = useState(false);
     const [shownTo, setToShow] = useState(false);
     const showGallery = () => {
@@ -26,14 +31,24 @@ const Hero = () => {
             setToShow(true);
         }
     }
+    const showCart = () => {
+        if (shownCart === true){
+            setCartShow(false);
+        }
+        else {
+            setCartShow(true);
+        }
+    }
     return(
-        <>
+        <ShopContextProvider>
         <nav>
           <div class="logo">Vaughn Valle</div>
           <div class="nav">
             <a href="/">Home</a> <a href="https://www.vaughnvalle.me/" target="_blank" rel="noreferrer">About</a> <a href="https://drive.google.com/file/d/17KcHZu-u0fQfqyv6D6Gdocxfv1-uOTjK/view?usp=sharing" target="_blank" rel="noreferrer">Resume</a>
+            <button onClick={showCart}><ShoppingCart size={32} /></button>
           </div>
         </nav>
+        {shownCart && <Cart />}
         {shownGal && <Gallery />}
         <section class="main">
           <div class="main-container">
@@ -56,7 +71,7 @@ const Hero = () => {
             {shownTo && <Todo />}
           </div>
         </section>
-        </>
+        </ ShopContextProvider>
     );
 
 };
